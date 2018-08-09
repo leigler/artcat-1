@@ -57,13 +57,26 @@ figure > iframe{
 /**************** text tags ****************/
 
 h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
 	margin: 0 auto;
 	width: 75%;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+h2{
+	font-style: italic;
+}
+
+h3{
+	font-style: italic;
 }
 
 p{
 	margin: 0 auto;
 	width: 75%;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 
