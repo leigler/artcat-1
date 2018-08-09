@@ -214,7 +214,159 @@ main{
 	margin: 0 auto;
 	width: 95vw;
 	max-width: 67rem;
+	font-size: 0;
 }
+
+img.image-set{
+	display: inline-block;
+	width: 18%;
+	margin: 1%;
+	vertical-align: top;
+}
+
+.lightbox{
+	position: fixed;
+	top: 100vh;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+}
+
+.lightbox.open{
+	top: 0px;
+}
+
+.lightbox > .container{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+}
+
+.lightbox > .container > .current-image{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: contain;
+  max-height: 90vh;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.lightbox > .container > .direction{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 3rem;
+	height: 3rem;
+	border: solid 1px white;
+	border-radius: 1.5rem;
+	cursor: pointer;
+}
+
+.lightbox > .container > .direction:active{
+	transform: scale(0.95);
+}
+
+
+.direction.next{
+	right: 1rem;
+}
+
+.direction > .cross, .direction > .plus{
+	position: absolute;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.direction > .cross{
+	width: 2rem;
+	height: 1px;
+}
+
+.direction > .plus{
+	width: 1px;
+	height: 2rem;
+}
+
+
+.direction.prev{
+	left: 1rem;
+}
+
+.lightbox > .container > .counter{
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1rem;
+	text-align: left;
+	width: 50vw;
+	color: white;
+}
+
+.lightbox > .container > .exit{
+	position: absolute;
+	bottom: 1.5rem;
+	right: 1rem;
+	text-align: right;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: white;
+	cursor: pointer;
+}
+
+
+.exit > .cross, .exit > .plus{
+	position: absolute;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1.5rem;
+	height: 1px;
+}
+
+.exit > .cross{
+	transform: rotate(45deg);
+}
+
+.exit > .plus{
+	transform: rotate(-45deg);
+
+}
+
+.lightbox > .background{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	opacity: 0.8;
+}
+
+
+@media all and (max-width: 768px){
+	img.image-set{
+		width: 48%;
+	}
+
+}
+
 
 
 /**************** FOOTER ****************/
