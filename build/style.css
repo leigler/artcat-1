@@ -260,17 +260,26 @@ img.image-set{
 	bottom: 0;
 	margin-top: auto;
 	margin-bottom: auto;
-	width: 3rem;
-	height: 3rem;
+	width: 2rem;
+	height: 2rem;
 	border: solid 1px white;
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	cursor: pointer;
+	z-index: 1000;
 }
 
 .lightbox > .container > .direction:active{
 	transform: scale(0.95);
 }
 
+@media all and (max-width: 768px){
+
+	.lightbox > .container > .direction{
+		top: auto;
+		bottom: 1.5rem;
+	}
+
+}
 
 .direction.next{
 	right: 1rem;
@@ -290,13 +299,13 @@ img.image-set{
 }
 
 .direction > .cross{
-	width: 2rem;
+	width: 1.5rem;
 	height: 1px;
 }
 
 .direction > .plus{
 	width: 1px;
-	height: 2rem;
+	height: 1.5rem;
 }
 
 
@@ -306,7 +315,7 @@ img.image-set{
 
 .lightbox > .container > .counter{
 	position: absolute;
-	bottom: 1.5rem;
+	top: 3rem;
 	left: 1rem;
 	text-align: left;
 	width: 50vw;
@@ -315,13 +324,14 @@ img.image-set{
 
 .lightbox > .container > .exit{
 	position: absolute;
-	bottom: 1.5rem;
+	top: 3rem;
 	right: 1rem;
 	text-align: right;
 	width: 1.5rem;
 	height: 1.5rem;
 	color: white;
 	cursor: pointer;
+	z-index: 1000;
 }
 
 
