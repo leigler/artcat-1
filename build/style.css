@@ -1,7 +1,9 @@
 /**************** style set-up ****************/
 html, body{
 	width: 100vw;
+	font-family: HelveticaNeue, Helvetica, Arial, sans;
 	font-size: 20px;
+
 }
 
 body{
@@ -69,6 +71,10 @@ h2{
 }
 
 h3{
+	text-transform: uppercase;
+}
+
+h4{
 	font-style: italic;
 }
 
@@ -79,6 +85,13 @@ p{
 	margin-bottom: 0.5rem;
 }
 
+a{
+	color: black;
+}
+
+a:hover{
+	color: black;
+}
 
 @media all and (max-width: 768px){
 	h1, h2, h3, h4, h5, h6, p{
@@ -102,13 +115,14 @@ nav{
 	z-index: 100000;
 }
 
-	.site-title{
+	a.site-title{
 		display: inline-block;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
 		margin: 0.25rem;
 		margin-left: 0.5rem;
 		vertical-align: bottom;
+		text-decoration: none;
 	}
 
 	.site-logo{
@@ -148,6 +162,10 @@ nav{
 
 	nav > ul > li > a{
 		text-decoration: none;
+	}
+
+	nav > ul > li.selected > a{
+		font-style: italic;
 	}
 
 	.mobile-icon{
@@ -236,6 +254,8 @@ img.image-set{
 	margin: 1%;
 	vertical-align: top;
 }
+
+/*************** LIGHTBOX ****************/
 
 .lightbox{
 	position: fixed;
@@ -389,6 +409,87 @@ img.image-set{
 	}
 
 }
+
+
+/*************** EXHIBITIONS ****************/
+
+
+.exhibition{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+a.exhibition{
+	text-decoration: none;
+}
+
+a.exhibition, a.exhibition:hover{
+	color: black;
+}
+
+.exhibit-thumbnail{
+	max-height: 10rem;
+	margin: 0;
+}
+
+.exhibit-thumbnail, .exhibit-info{
+	vertical-align: top;
+	display: inline-block;
+	object-fit: contain;
+	width: 50%;
+	box-sizing: border-box;
+	padding-right: 0.5rem;
+}
+
+.exhibit-info > h3, .exhibit-info > h4, .exhibit-info > p{
+	margin-left: 0;
+}
+
+
+
+
+
+/*************** TWO COLUMN ****************/
+
+.column{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	box-sizing: border-box;
+	padding-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.column.full-width{
+	display: block;
+	width: 100%;
+}
+
+.column > h1, .column > h2, .column > h3, .column > h4, .column > p{
+	margin-left: 0;
+}
+
+.list-item{
+	margin-bottom: 1.5rem;
+}
+
+.column > .list-item > h1, .column > .list-item > h2, .column > .list-item > h3, .column > .list-item > h4, .column > .list-item > p{
+	margin-left: 0;
+}
+
+.column > img.image-set{
+	width: 48%;
+	margin-left: 0;
+	margin-right: 2%;
+}
+
+@media all and (max-width: 768px){
+	.column{
+		width: 100%;
+	}
+}
+
 
 
 
