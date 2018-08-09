@@ -31,9 +31,11 @@ Site.lightbox = function(){
 
 		$(".image-set").on('click', function(){
 			//add all image sources to imageArray
-			$(".image-set").each(function(){
-				imageArray.push($(this).attr("src"))
-			})
+			if(imageArray.length == 0){
+				$(".image-set").each(function(){
+					imageArray.push($(this).attr("src"))
+				})
+			}
 
 			// get current image and populate lightbox
 			var thisSource = $(this).attr("src"),
@@ -56,7 +58,7 @@ Site.lightbox = function(){
 			// update direction controls
 			updateDirections(index)
 		})
-		
+
 		var exit = function(){
 			$(".lightbox").removeClass("open")
 		}
