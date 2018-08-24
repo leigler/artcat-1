@@ -68,22 +68,27 @@
 </head>
 <body>
 	<nav>
-		<a href="index.html" class="site-title">ArtCat</a>
-		<!-- <img class="site-logo" src="assets/2017.jpg"> -->
-		<ul>
-			<li>
-				<a href="exhibitions.html">Exhibitions</a>
-			</li>
-			<li>
-				<a href="lists.html">Lists</a>
-			</li>
-			<li>
-				<a href="lightbox.html">Lightbox</a>
-			</li>
-			<li class="selected">
-				<a href="two-column.html">Double Column</a>
-			</li>
-		</ul>
+		<div class="nav-wrapper">
+			<a href="index.html" class="site-title">ArtCat</a>
+			<!-- <img class="site-logo" src="assets/2017.jpg"> -->
+			<ul>
+				<li>
+					<a href="exhibitions.html">Exhibitions</a>
+				</li>
+				<li>
+					<a href="lists.html">Lists</a>
+				</li>
+				<li>
+					<a href="image-lists.html">Image Lists</a>
+				</li>
+				<li>
+					<a href="lightbox.html">Lightbox</a>
+				</li>
+				<li class="selected">
+					<a href="two-column.html">Double Column</a>
+				</li>
+			</ul>
+		</div>
 		<div class="mobile-icon">
 			<div class="mobile-bars"></div>
 			<div class="mobile-bars"></div>
@@ -100,8 +105,14 @@
 				<p>August 9</p>
 			</div>
 			<div class="column">
-				<img src="assets/image-2.jpg" class="image-set">
-				<img src="assets/image-4.jpg" class="image-set">
+				<div class="image-set">
+					<img src="assets/image-2.jpg">
+					<p>A caption for this image</p>	
+				</div>
+				<div class="image-set">
+					<img src="assets/image-4.jpg">
+					<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>	
+				</div>
 			</div>
 			<div class="column">
 				<p>Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
@@ -126,12 +137,16 @@
 					<div class="plus"></div>
 				</div>
 				<img class="current-image" src="">
+				<div class="lightbox-caption"></div>
 			</div>
 		</div>
 	</main>
 
 	<footer>
-		<div class="footer-text">Powered by ArtCat</div>
+		<div class="footer-wrapper">
+			<div class="footer-text">Copyright 2018</div>
+			<div class="footer-text">Powered by ArtCat</div>	
+		</div>
 	</footer>
 </body>
 </html>

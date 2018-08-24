@@ -68,22 +68,27 @@
 </head>
 <body>
 	<nav>
-		<a href="index.html" class="site-title">ArtCat</a>
+		<div class="nav-wrapper">
+			<a href="index.html" class="site-title">ArtCat</a>
 		<!-- <img class="site-logo" src="assets/2017.jpg"> -->
-		<ul>
-			<li>
-				<a href="exhibitions.html">Exhibitions</a>
-			</li>
-			<li>
-				<a href="lists.html">Lists</a>
-			</li>
-			<li>
-				<a href="lightbox.html">Lightbox</a>
-			</li>
-			<li>
-				<a href="two-column.html">Double Column</a>
-			</li>
-		</ul>
+			<ul>
+				<li>
+					<a href="exhibitions.html">Exhibitions</a>
+				</li>
+				<li>
+					<a href="lists.html">Lists</a>
+				</li>
+				<li>
+					<a href="image-lists.html">Image Lists</a>
+				</li>
+				<li>
+					<a href="lightbox.html">Lightbox</a>
+				</li>
+				<li>
+					<a href="two-column.html">Double Column</a>
+				</li>
+			</ul>
+		</div>
 		<div class="mobile-icon">
 			<div class="mobile-bars"></div>
 			<div class="mobile-bars"></div>
@@ -92,29 +97,36 @@
 	</nav>
 	<main>
 		<div class="content">
-			<h1>A First Header</h1>
-			<video src="assets/video.mp4" controls ></video>
-			<img src="assets/image-7.jpg">
-			<h2>A Second Header</h2>
-			<p>
+			<div class="column full-width">
+				<h1>Page Title</h1>
+			</div>
+			<div class="column">
+				<video src="assets/video.mp4" controls ></video>
+				<img src="assets/image-7.jpg">
+				<h2>A Second Header</h2>
+				<p>
 				Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.
-			</p>
-			<h3>A Third Header</h3>
-			<p>
+				</p>
+				<h3>A Third Header</h3>
+				<p>
 				Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Praesent commodo cursus <a href="https://google.com">magna</a>, vel scelerisque nisl consectetur et.
-			</p>
-			<!-- vimeo beginning -->
-			<div style="padding:55% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/156563470?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-			<!-- vimeo end -->
+				</p>
+				<!-- vimeo beginning -->
+				<div style="padding:55% 0 0 0;position:relative; margin-bottom: 2rem;"><iframe src="https://player.vimeo.com/video/156563470?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				<!-- vimeo end -->
 
-			<p>
+				<p>
 				Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Praesent commodo cursus <a href="https://google.com">magna</a>, vel scelerisque nisl consectetur et.
-			</p>
-
+				</p>
+			</div>
 		</div>
 	</main>
+	
 	<footer>
-		<div class="footer-text">Powered by ArtCat</div>
+		<div class="footer-wrapper">
+			<div class="footer-text">Copyright 2018</div>
+			<div class="footer-text">Powered by ArtCat</div>	
+		</div>
 	</footer>
 </body>
 </html>

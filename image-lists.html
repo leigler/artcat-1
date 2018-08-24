@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="language" content="English"> 
+	<meta name="language" content="English"> 	
 	
 	<title>Artcat</title>
 	<link rel="stylesheet" type="text/css" href="build/style.css">
@@ -72,13 +72,13 @@
 			<a href="index.html" class="site-title">ArtCat</a>
 			<!-- <img class="site-logo" src="assets/2017.jpg"> -->
 			<ul>
-				<li class="selected">
+				<li>
 					<a href="exhibitions.html">Exhibitions</a>
 				</li>
-				<li>
+				<li class="">
 					<a href="lists.html">Lists</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="image-lists.html">Image Lists</a>
 				</li>
 				<li>
@@ -87,9 +87,8 @@
 				<li>
 					<a href="two-column.html">Double Column</a>
 				</li>
-			</ul>	
+			</ul>
 		</div>
-		
 		<div class="mobile-icon">
 			<div class="mobile-bars"></div>
 			<div class="mobile-bars"></div>
@@ -99,47 +98,53 @@
 
 	<main>
 		<div class="content">
-			<div class="column">
-				<h1>Current Exhibitions</h1>
-				<a href="two-column.html" class="exhibition">
-					<img src="assets/image-1.jpg" class="exhibit-thumbnail">
-					<div class="exhibit-info">
-						<h3>Exhibition Title</h3>
-						<p>A short Description</p>
-						<p>August 9</p>
-					</div>
-				</a>
-				<a href="two-column.html" class="exhibition">
-					<img src="assets/image-1.jpg" class="exhibit-thumbnail">
-					<div class="exhibit-info">
-						<h3>Exhibition Title</h3>
-						<p>A short Description</p>
-						<p>August 9</p>
-					</div>
-				</a>
+			<div class="column full-width">
+				<h1>Artist List (for example)</h1>
 			</div>
-
 			<div class="column">
-				<h1>Upcoming Exhibitions</h1>
-				<a href="two-column.html" class="exhibition">
-					<img src="assets/image-1.jpg" class="exhibit-thumbnail">
-					<div class="exhibit-info">
-						<h3>Exhibition Title</h3>
-						<p>A short Description</p>
-						<p>August 10</p>
-					</div>
-				</a>
-				<a href="two-column.html" class="exhibition">
-					<img src="assets/image-1.jpg" class="exhibit-thumbnail">
-					<div class="exhibit-info">
-						<h3>Exhibition Title</h3>
-						<p>A short Description</p>
-						<p>August 9</p>
-					</div>
-				</a>
+				<h2>Artists under one section</h2>
+				<div class="image-list-item">
+					<h3>Artist Name Giraffe</h3>
+					<img src="assets/image-4.jpg">
+				</div>
+				<div class="image-list-item">
+					<h3>Artist Name</h3>
+					<img src="assets/image-2.jpg">
+				</div>
+				<div class="image-list-item">
+					<h3>Artist Name</h3>
+					<img src="assets/image-1.jpg">
+				</div>
+				<div class="image-list-item">
+					<h3>Artist Name Without Image</h3>
+				</div>
 			</div>
+			<div class="column">
+				<h2>Artists under one section</h2>
+				<div class="image-list-item">
+					<h3>Artist Name</h3>
+					<img src="assets/image-4.jpg">
+					<h4>Subtitle</h4>
+					<p>A description of something. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+				</div>
+				<div class="image-list-item">
+					<h3>Artist Name</h3>
+					<img src="assets/image-2.jpg">
+					<h4>Subtitle</h4>
+					<p>A description of something. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+				</div>
+				<div class="image-list-item">
+					<h3>Artist Name</h3>
+					<img src="assets/image-1.jpg">
+					<h4>Subtitle</h4>
+					<p>A description of something. Donec sed odio dui.</p>
+				</div>
 
-		</div>
+				<div class="image-list-item">
+					<h3>List Item with no Subtitle</h3>
+					<p>A description of something. Donec sed odio dui.</p>
+				</div>
+			</div>
 	</main>
 
 	<footer>

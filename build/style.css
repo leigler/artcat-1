@@ -26,19 +26,18 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li{
 img, video, iframe, figure{
 	display: block;
 	position: relative;
-	margin: 0 auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
 img{
 	object-fit: contain;
-	width: 75%;
+	width: 100%;
 }
 
 video{
 	object-fit: contain;
-	width: 75%;
+	width: 100%;
 }
 
 iframe, video{
@@ -49,9 +48,14 @@ figure > iframe{
 		width: 100%;
 }
 
+iframe{
+	width: 100%;
+	text-align: left;
+}
+
 @media all and (max-width: 1000px){
 	img, video{
-		width: 75%;
+		width: 100%;
 		max-width: 1000px;
 	}
 }
@@ -66,8 +70,6 @@ figure > iframe{
 
 h1, h2, h3, h4, h5, h6{
 	font-weight: normal;
-	margin: 0 auto;
-	width: 75%;
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 }
@@ -85,8 +87,6 @@ h4{
 }
 
 p{
-	margin: 0 auto;
-	width: 75%;
 	font-size: 1rem;
 	margin-bottom: 0.5rem;
 }
@@ -115,20 +115,31 @@ nav{
 	top: 0;
 	left: 0;
 	width: 100vw;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	min-height: 2.2rem;
 	border-bottom: 0.05rem solid black;
 	background-color: white;
 	z-index: 100000;
 }
 
+	.nav-wrapper{
+		display: block;
+		margin: 0 auto;
+		width: 95vw;
+		max-width: 67rem;
+	}
+
+
 	a.site-title{
 		display: inline-block;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
 		margin: 0.25rem;
-		margin-left: 0.5rem;
+		margin-left: 0rem;
 		vertical-align: bottom;
 		text-decoration: none;
+		padding-right: 1rem;
 	}
 
 	.site-logo{
@@ -137,26 +148,25 @@ nav{
 		padding: 0.25rem;
 		width: 12.5vw;
 		min-width: 5rem;
-		max-width: 10rem;
 		object-fit: contain;
 		max-height: 5rem;
 		margin-top: 0;
 		margin-bottom: 0;
 		vertical-align: bottom;
+		padding-right: 1rem;
 	}
 
-	nav > ul{
+	nav > .nav-wrapper > ul{
 		display: inline-block;
 		list-style: none;
-		width: 75vw;
 		height: 100%;
 		box-sizing: border-box;
-		padding-left: 1rem;
 		vertical-align: bottom;
 		margin: 0.25rem;
+		margin-left: 0;
 	}
 
-	nav > ul > li{
+	nav > .nav-wrapper > ul > li{
 		display: inline-block;
 		vertical-align: bottom;
 		font-size: 1rem;
@@ -165,12 +175,15 @@ nav{
 		margin-right: 0.25rem;
 
 	}
+	nav > .nav-wrapper > ul > li:nth-of-type(1){
+		margin-left: 0;
+	}
 
-	nav > ul > li > a{
+	nav > .nav-wrapper > ul > li > a{
 		text-decoration: none;
 	}
 
-	nav > ul > li.selected > a{
+	nav > .nav-wrapper > ul > li.selected > a{
 		font-style: italic;
 	}
 
@@ -191,7 +204,7 @@ nav{
 		margin-left: 1rem;
 	}
 
-	nav > ul{
+	nav > .nav-wrapper > ul{
 		display: none;
 		padding-left: 0;
 	}
@@ -200,20 +213,20 @@ nav{
 		height: 100%;
 	}
 
-	nav.open > ul{
+	nav.open > .nav-wrapper > ul{
 		display: block;
 		height: auto;
 		width: 100vw;
-  	margin-left: 0.5rem;
+  	margin-left: 0rem;
 		margin-top: 1rem;
   	margin-bottom: 1rem;
 		text-align: left;
 
 	}
 
-	nav.open > ul > li{
+	nav.open > .nav-wrapper > ul > li{
 		display: block;
-		margin-bottom: 0.25rem;
+		margin-bottom: 0rem;
 	}
 
 	.mobile-icon{
@@ -240,7 +253,6 @@ nav{
 		-moz-transform: rotate(-10deg);
 	}
 
-
 }
 
 
@@ -258,11 +270,27 @@ main{
 	font-size: 0;
 }
 
-img.image-set{
+
+
+.content > p{
+	width: 50%;
+}
+
+
+.image-set{
 	display: inline-block;
 	width: 18%;
 	margin: 1%;
 	vertical-align: top;
+}
+
+.image-set > img{
+	width: 100%;
+	margin-bottom: 0.25rem;
+}
+
+.image-set > p{
+	font-size: 0.75rem;
 }
 
 /*************** LIGHTBOX ****************/
@@ -292,7 +320,8 @@ img.image-set{
   top: 50%;
   left: 50%;
   object-fit: contain;
-  max-height: 90vh;
+  max-height: 80vh;
+  max-width: 95vw;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
@@ -315,7 +344,28 @@ img.image-set{
 	transform: scale(0.95);
 }
 
+.lightbox-caption{
+	position: fixed;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	bottom: 1rem;
+	width: 95vw;
+	max-width: 67rem;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
 @media all and (max-width: 768px){
+
+
+	.lightbox-caption{
+		bottom: 4rem;
+		text-shadow: 0px 0px 0.25rem black;
+		text-align: center;
+	}
 
 	.lightbox > .container > .direction{
 		top: auto;
@@ -414,7 +464,7 @@ img.image-set{
 
 
 @media all and (max-width: 768px){
-	img.image-set{
+	.image-set{
 		width: 48%;
 	}
 
@@ -488,15 +538,59 @@ a.exhibition, a.exhibition:hover{
 	margin-left: 0;
 }
 
-.column > img.image-set{
+.column > h3{
+	margin-top: 1rem;
+}
+
+.image-list-item{
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+	box-sizing: border-box;
+	padding-right: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.image-list-item > h2, .image-list-item > h3, .image-list-item > h4{
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+} 
+
+.image-list-item > img{
+	max-width: 100%;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+
+.column > .image-set{
+	display: inline-block;
 	width: 48%;
 	margin-left: 0;
 	margin-right: 2%;
+	margin-top: 1%;
+	vertical-align: top;
+}
+
+.column > .image-set > img{
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0.25rem;
+}
+
+.column > .image-set > p{
+	margin-top: 0px;
+	font-size: 0.75rem;
 }
 
 @media all and (max-width: 768px){
 	.column{
 		width: 100%;
+		padding-right: 0;
+	}
+
+	.image-list-item{
+		padding-right: 0.25rem;
+		padding-left: 0.25rem;
 	}
 }
 
@@ -514,8 +608,22 @@ footer{
 	text-align: center;
 }
 
+	.footer-wrapper{
+		display: block;
+		width: 95vw;
+		max-width: 67rem;
+		margin: 0 auto;
+		font-size: 0;
+	}
+
 	.footer-text{
-		text-align: center;
+		width: 50%;
+		text-align: left;
+		display: inline-block;
 		font-size: 0.5rem;
 		font-family: Helvetica, Arial, sans;
+	}
+
+	.footer-text:nth-of-type(2){
+		text-align: right;
 	}

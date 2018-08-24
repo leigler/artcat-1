@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="language" content="English"> 
-		
+	
 	<title>Artcat</title>
 	<link rel="stylesheet" type="text/css" href="build/style.css">
 	<style type="text/css">
@@ -81,10 +81,10 @@
 				<li>
 					<a href="image-lists.html">Image Lists</a>
 				</li>
-				<li class="selected">
+				<li>
 					<a href="lightbox.html">Lightbox</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="two-column.html">Double Column</a>
 				</li>
 			</ul>
@@ -98,17 +98,39 @@
 
 	<main>
 		<div class="content">
-			<div class="image-set">
-				<img src="assets/image-1.jpg">
-				<p>a first caption</p>
+			<div class="column full-width">
+				<h1>Artist Name</h1>
 			</div>
-			<div class="image-set" ><img src="assets/image-2.jpg"></div>
-			<div class="image-set" ><img src="assets/image-3.jpg"></div>
-			<div class="image-set" ><img src="assets/image-4.jpg"></div>
-			<div class="image-set" ><img src="assets/image-5.jpg"></div>
-			<div class="image-set" ><img src="assets/image-6.jpg"></div>
-			<div class="image-set" ><img src="assets/image-7.jpg"></div>
+			<div class="column">
+				<h2>A subtitle</h2>
+				<p>Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+				<h3>Another subtitle</h3>
+				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum.</p>
+			</div>
+			<div class="column">
+				<div class="image-set">
+					<img src="assets/image-2.jpg">
+					<p>A caption for this image</p>	
+				</div>
+				<div class="image-set">
+					<img src="assets/image-4.jpg">
+					<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>	
+				</div>
+			</div>
+			<div class="column full-width">
+				<h3>Some sort of subsection</h3>
+			</div>
+			<div class="column">
+				<p><a href="">A link!</a></p>
+				<p><a href="">Another link!</a></p>
+			</div>
+			<div class="column">
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
+
+				<p>Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			</div>
 		</div>
+
 		<div class="lightbox">
 			<div class="background"></div>
 			<div class="container">
